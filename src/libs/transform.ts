@@ -1,6 +1,6 @@
 
-export function list2Dict(lst, key, contentKey) {
-  const dct = {}
+export function list2Dict(lst: any[], key: string, contentKey: string | undefined) {
+  const dct: any = {}
   for (let i = 0; i < lst.length; i++) {
     const item = lst[i]
     dct[item[key]] = contentKey ? item[contentKey] : item
@@ -9,13 +9,13 @@ export function list2Dict(lst, key, contentKey) {
   return dct
 }
 
-export function list2Tree(listData, options = {
+export function list2Tree(listData: any[], options = {
   key: 'key',
   parent: 'parent'
 }) {
   const _key = options.key
   const _parent = options.parent
-  const _dct = {}
+  const _dct: any = {}
   for (let i = 0; i < listData.length; i++) {
     const key = listData[i][_key]
     _dct[key] = {
@@ -34,13 +34,13 @@ export function list2Tree(listData, options = {
     }
   }
 
-  return Object.values(_dct).filter(item => !item[_parent]);
+  return Object.values(_dct).filter((item: any) => !item[_parent]);
 }
 
-export function tree2List(treeData, options = {
+export function tree2List(treeData: any[], options = {
   key: 'key',
   parent: 'parent'
-}) {
+}): any[] {
   let lst = []
   for (let i = 0; i < treeData.length; i++) {
     const item = treeData[i]

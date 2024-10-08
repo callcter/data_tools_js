@@ -1,6 +1,6 @@
-import { isNumber } from './type.js';
+import { isNumber } from './type';
 
-export function formatNum(num, except = null, scale = 2) {
+export function formatNum(num: any, except = null, scale = 2) {
   if (num || num === 0) {
     if (isNumber(num)) {
       if (Math.abs(num) >= 1000000000000) {
@@ -20,7 +20,7 @@ export function formatNum(num, except = null, scale = 2) {
   }
 }
 
-export function formatPercent(num, except = null, scale = 2) {
+export function formatPercent(num: any, except = null, scale = 2) {
   if (num || num === 0) {
     if (isNumber(num)) {
       return num.toFixed(scale) + '%';

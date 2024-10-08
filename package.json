@@ -1,18 +1,33 @@
 {
   "name": "data_tools_js",
   "version": "0.0.1",
-  "description": "A collection of commonly used data processing tools",
   "private": false,
-  "main": "index.js",
-  "module": "index.js",
-  "type": "module",
-  "types": "index.d.ts",
+  "description": "这是一个函数几何，收集了我在做数据后台和展示项目中常用的一些函数。",
+  "keywords": [
+    "data",
+    "function"
+  ],
+  "license": "MIT",
+  "author": "callcter",
+  "bugs": {
+    "url": "https://github.com/callcter/data_tools_js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/callcter/data_tools_js"
+  },
+  "main": "dist/data_tools_js.min.js",
+  "module": "dist/data_tools_js.min.js",
+  "type": "commonjs",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "data"
-  ],
-  "author": "callcter",
-  "license": "MIT"
+  "dependencies": {
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.6.2",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
+  }
 }
