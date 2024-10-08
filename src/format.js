@@ -1,6 +1,4 @@
-export function isNumber(n) {
-  return typeof n === 'number' && !isNaN(n) && Number.isFinite(n);
-}
+import { isNumber } from './type.js';
 
 export function formatNum(num, except = null, scale = 2) {
   if (num || num === 0) {
