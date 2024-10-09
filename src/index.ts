@@ -1,7 +1,7 @@
-import * as format from './libs/format';
-import * as statistics from './libs/statistics';
-import * as transform from './libs/transform';
-import * as type from './libs/type';
+import * as format from './format';
+import * as statistics from './statistics';
+import * as transform from './transform';
+import * as dataType from './dataType';
 
 export const formatNum = format.formatNum;
 export const formatPercent = format.formatPercent;
@@ -12,12 +12,12 @@ export const calculateIntervalDistribution = statistics.calculateIntervalDistrib
 export const list2Dict = transform.list2Dict;
 export const list2Tree = transform.list2Tree;
 export const tree2List = transform.tree2List;
-export const getTypeOfVariable = type.getTypeOfVariable;
-export const isNumber = type.isNumber;
+export const getTypeOfVariable = dataType.getTypeOfVariable;
+export const isNumber = dataType.isNumber;
 
 export default {
   ...format,
   ...statistics,
   ...transform,
-  ...type,
+  ...dataType,
 };

@@ -2,7 +2,7 @@ export declare function list2Dict(lst: any[], key: string, contentKey: string | 
 export declare function list2Tree(listData: any[], options?: {
     key: string;
     parent: string;
-}): unknown[];
+}): any[];
 export declare function tree2List(treeData: any[], options?: {
     key: string;
     parent: string;

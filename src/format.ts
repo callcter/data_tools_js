@@ -1,4 +1,4 @@
-import { isNumber } from './type';
+import { isNumber } from './dataType';
 
 export function formatNum(num: any, except = null, scale = 2) {
   if (num || num === 0) {

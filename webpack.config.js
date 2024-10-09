@@ -1,17 +1,11 @@
-const path = require('path');
-const TerserPlugin = require('terser-webpack-plugin');
-
 module.exports = {
   entry: './src/index.ts',
   mode: 'production',
   output: {
-    filename: 'data_tools_js.min.js',
-    // path: path.resolve(__dirname, 'dist'),
-    // library: 'data_tools_js',
+    filename: 'data_tools_js.js',
     library: {
       name: 'data_tools_js',
-      type: 'umd',
-    //   umdNameDefine: true,
+      type: 'this'
     }
   },
   resolve: {
@@ -26,8 +20,4 @@ module.exports = {
       }
     ]
   },
-  optimization: {
-    minimize: true,
-    minimizer: [new TerserPlugin()]
-  }
 }

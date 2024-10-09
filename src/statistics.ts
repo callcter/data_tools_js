@@ -1,7 +1,8 @@
-export function arraySum(arr: any[]) {
+export function arraySum(arr: number[]): number {
   const sum = arr.reduce((total, current) => {
     return total + current;
   }, 0);
+
   return sum;
 }
 
@@ -12,7 +13,7 @@ export function arraySum(arr: any[]) {
  * @param {*} lst 数组
  * @returns { 最大、最小、平均、长度、各分位点的值 }
  */
-export function quartileVal(pos: number, len: number, lst: any[]) {
+export function quartileVal(pos: number, len: number, lst: any[]): number {
   const k = pos * (len + 1);
   if (Number.isInteger(k)) {
     return lst[k + 1];
@@ -23,7 +24,7 @@ export function quartileVal(pos: number, len: number, lst: any[]) {
   }
 }
 
-export function quartile(arr: any[]) {
+export function quartile(arr: any[]): any {
   const arrTemp = [...arr];
   arrTemp.sort((a, b) => a - b);
   const len = arrTemp.length;
@@ -46,7 +47,7 @@ export function quartile(arr: any[]) {
   };
 }
 
-export function calculateIntervalDistribution(array: any[], numIntervals: number) {
+export function calculateIntervalDistribution(array: any[], numIntervals: number): any {
   const min = Math.min(...array);
   const max = Math.max(...array);
   const step = (max - min) / numIntervals;

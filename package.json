@@ -16,15 +16,23 @@
     "type": "git",
     "url": "https://github.com/callcter/data_tools_js"
   },
-  "main": "dist/data_tools_js.min.js",
-  "module": "dist/data_tools_js.min.js",
-  "type": "commonjs",
-  "types": "dist/index.d.ts",
+  "homepage": "https://github.com/callcter/data_tools_js/blob/master/README.md",
+  "main": "dist/lib/index.js",
+  "module": "dist/es/index.js",
+  "types": "dist/lib/index.d.ts",
+  "unpkg": "dist/data_tools_js.js",
   "scripts": {
-    "build": "webpack",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:node": "tsc -p tsconfig.json",
+    "build": "rm -rf ./dist && npm run build:esm && npm run build:node && webpack-cli",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
+  "devDependencies": {
     "ts-loader": "^9.5.1",
     "typescript": "^5.6.2",
     "webpack": "^5.95.0",

@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",  // 指定编译文件的目录
+    "outDir": "dist/es",  // 指定输出文件的目录
+    "target": "es5",  // 输出 js 的版本
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "declaration": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.ts"]  // 处理目标目录中各级目录的 ts 文件
+}
