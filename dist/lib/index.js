@@ -34,11 +34,12 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.isNumber = exports.getTypeOfVariable = exports.tree2List = exports.list2Tree = exports.list2Dict = exports.calculateIntervalDistribution = exports.quartile = exports.quartileVal = exports.arraySum = exports.formatPercent = exports.formatNum = void 0;
+exports.format_rpd_cn = exports.isNumber = exports.getTypeOfVariable = exports.tree2List = exports.list2Tree = exports.list2Dict = exports.calculateIntervalDistribution = exports.quartile = exports.quartileVal = exports.arraySum = exports.formatPercent = exports.formatNum = void 0;
 var format = __importStar(require("./format"));
 var statistics = __importStar(require("./statistics"));
 var transform = __importStar(require("./transform"));
 var dataType = __importStar(require("./dataType"));
+var finance = __importStar(require("./finance"));
 exports.formatNum = format.formatNum;
 exports.formatPercent = format.formatPercent;
 exports.arraySum = statistics.arraySum;
@@ -50,5 +51,6 @@ exports.list2Tree = transform.list2Tree;
 exports.tree2List = transform.tree2List;
 exports.getTypeOfVariable = dataType.getTypeOfVariable;
 exports.isNumber = dataType.isNumber;
-exports.default = __assign(__assign(__assign(__assign({}, format), statistics), transform), dataType);
+exports.format_rpd_cn = finance.format_rpd_cn;
+exports.default = __assign(__assign(__assign(__assign(__assign({}, format), statistics), transform), dataType), finance);
 //# sourceMappingURL=index.js.map

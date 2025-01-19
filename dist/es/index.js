@@ -13,6 +13,7 @@ import * as format from './format';
 import * as statistics from './statistics';
 import * as transform from './transform';
 import * as dataType from './dataType';
+import * as finance from './finance';
 export var formatNum = format.formatNum;
 export var formatPercent = format.formatPercent;
 export var arraySum = statistics.arraySum;
@@ -24,5 +25,6 @@ export var list2Tree = transform.list2Tree;
 export var tree2List = transform.tree2List;
 export var getTypeOfVariable = dataType.getTypeOfVariable;
 export var isNumber = dataType.isNumber;
-export default __assign(__assign(__assign(__assign({}, format), statistics), transform), dataType);
+export var format_rpd_cn = finance.format_rpd_cn;
+export default __assign(__assign(__assign(__assign(__assign({}, format), statistics), transform), dataType), finance);
 //# sourceMappingURL=index.js.map
